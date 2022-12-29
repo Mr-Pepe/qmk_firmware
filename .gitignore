@@ -5,6 +5,8 @@
 .DS_Store
 ._*
 
+venv
+
 # Merge files
 *.orig
 *.rej
