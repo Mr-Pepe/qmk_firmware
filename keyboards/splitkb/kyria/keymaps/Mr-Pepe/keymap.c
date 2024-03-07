@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //  *                        |      |      |      |      |      |  |      |      |      |      |      |
   //  *                        `----------------------------------'  `----------------------------------'
     [_NEO] = LAYOUT(
-      KC_BSPC,                KC_LBRC,      KC_SCLN,  KC_Z,           KC_P,       KC_W,                                                                                                   KC_K,       KC_H,       KC_G,    KC_F,    KC_Q,     KC_QUOT,
+      KC_ESC,                KC_LBRC,      KC_SCLN,  KC_Z,           KC_P,       KC_W,                                                                                                   KC_K,       KC_H,       KC_G,    KC_F,    KC_Q,     KC_QUOT,
       KC_TAB,    MT(MOD_LSFT, KC_U),  LT(_SYMBOLS, KC_I),       MT(MOD_LSFT, KC_A),           KC_E,       KC_O,                                                                KC_S,       KC_N, MT(MOD_LSFT, KC_R),    LT(_SYMBOLS, KC_T),    KC_COMM,  KC_SLSH,
       S(KC_TAB), MT(MOD_LCTL, KC_X),  KC_V,   KC_J,   KC_C,   KC_Y,    KC_PSCR,            KC_VOLD,            KC_VOLU,            KC_MPLY,            KC_B,       KC_M,       KC_L, KC_D,  KC_DOT, KC_MINS,
                                                         C(KC_S),        LT(_WINDOWING, KC_LGUI),   MT(MOD_LCTL, KC_ENT),   MT(MOD_LALT, KC_SPC), LT(_FN, KC_ESC),   LT(_FN, KC_ESC), LT(_NUMBERS, KC_SPC), LT(_ARROWS, KC_ENT),     KC_LSFT,    KC_RALT
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______,    _______,                                     _______, _______, KC_UP,   _______,    _______,    _______,
       _______, _______, _______, KC_LSFT, KC_LCTL,    _______,                                     KC_HOME, KC_LEFT, KC_DOWN, KC_RGHT, KC_END, _______,
       _______, _______, _______, _______, A(S(KC_C)), _______, _______, _______, _______, _______, _______, KC_BSPC, _______, KC_DEL, _______, _______,
-                                 _______, _______,    _______, _______, _______, _______, _______, _______, _______, _______
+                                 _______, _______,    KC_LCTL, KC_LALT, _______, _______, _______, _______, _______, _______
     ),
     [_WINDOWING] = LAYOUT(
     A(KC_F4), _______, G(KC_Q), G(KC_W), G(KC_E), _______,                                       _______, G(KC_1), G(KC_2), G(KC_3), _______, _______,
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_NUMBERS] = LAYOUT(
       _______, _______, _______, _______, _______, _______,                                     _______, KC_7,    KC_8,    KC_9, _______, _______,
-      _______, _______, _______, SQR, QUB, _______,                                     KC_0,    KC_4,    KC_5,    KC_6, C(KC_P), A(S(KC_P)),
+      _______, _______, _______, SQR,     QUB,     _______,                                     KC_0,    KC_4,    KC_5,    KC_6, C(KC_P), A(S(KC_P)),
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_1,    KC_2,    KC_3, _______, _______,
                                  _______, _______, KC_LCTL, KC_LALT, _______, _______, _______, _______, _______, _______
     ),
@@ -78,10 +78,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [_FN] = LAYOUT(
-      _______, KC_F11, KC_F12, _______, _______,    _______,                                     _______, _______, _______, _______, _______, _______,
-      _______, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,                                     _______, _______, _______, _______, _______, _______,
-      _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, _______, KC_BRIGHTNESS_DOWN,  KC_BRIGHTNESS_UP,  KC_MUTE, _______, _______, _______, _______, _______, _______,
-                                 _______, KC_MPRV,    KC_MNXT, _______, _______, _______, _______, _______, _______, _______
+      _______, KC_F11, KC_F12, _______, _______,    _______,                                                         _______, _______, _______, _______, _______, _______,
+      _______, KC_F6,  KC_F7,  KC_F8,   KC_F9,      KC_F10,                                                          _______, _______, KC_LSFT, _______, _______, _______,
+      _______, KC_F1,  KC_F2,  KC_F3,   KC_F4,      KC_F5, _______, KC_BRIGHTNESS_DOWN,  KC_BRIGHTNESS_UP,  KC_MUTE, _______, _______, _______, _______, _______, _______,
+                                 _______, KC_MPRV,    KC_MNXT, _______, _______,                            _______, _______, _______, _______, _______
     ),
 // /*
 //  * Layer template
